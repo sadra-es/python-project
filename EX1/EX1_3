@@ -1,0 +1,7 @@
+a=int(input('please inter base size : '))
+b=int(input('please inter height size : '))
+def EX1_3(a,b):
+    if a >0 and b >0:
+        Maxedgetri=a+b-1
+        return(Maxedgetri)
+print(EX1_3(a,b))
