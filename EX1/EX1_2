@@ -1,0 +1,7 @@
+m=int(input('please inter base size : '))
+h=int(input('please inter height size : '))
+def EX1_2(m,h):
+    S=((m*h)/2)
+    return(S)
+
+print (EX1_2(m,h))
