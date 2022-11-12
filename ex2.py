@@ -1,4 +1,4 @@
-#صدرا اسماعیلی 4012061002
+#4012061002         صدرا اسماعیلی
 def seconds_difference(time_1, time_2):
     """ (number, number) -> number
 
@@ -93,17 +93,27 @@ def to_24_hour_clock(hours):
 
 
 ### Write your get_hours function definition here:
+def get_minutes(S):
+    hours = S // 3600
+    return hours
 
 
 
 
 ### Write your get_minutes function definition here:
-
+def get_minutes(S):
+    hours = S // 3600
+    minutes = (S - hours * 3600) // 60
+    return minutes
 
 
 
 ### Write your get_seconds function definition here:
-
+def get_minutes(S):
+    hours = S // 3600
+    minutes = (S - hours * 3600) // 60
+    seconds = (S - hours * 3600- minutes * 60)
+    return seconds
 
 
 
@@ -126,6 +136,9 @@ def time_to_utc(utc_offset, time):
     >>> time_to_utc(-1, 23.0)
     0.0
     """
+    A = (( utc_offset * -1 ) + time ) % 24
+    return(A)
+
 
 
 
@@ -151,6 +164,5 @@ def time_from_utc(utc_offset, time):
     >>> time_from_utc(+1, 23.0)
     0.0
     """
-
-
-
+    B = ( utc_offset + time ) % 24
+    return(B)
